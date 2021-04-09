@@ -28,8 +28,13 @@
         var myArray = [nameList.toString()];
         var list = document.getElementById("myList");
         for (var i = 0; i < myArray.length; i++) {
-            alert(nameList);
-            list.innerHTML = list.innerHTML + "<li>" + myArray[i] + "</li>"
+            if(nameList== ""){
+                alert("Empty Value");
+                list.innerHTML = list.innerHTML + "<li> Empty Value</li>"
+            }else{
+                alert(nameList);
+                list.innerHTML = list.innerHTML + "<li>" + myArray[i] + "</li>"
+            }
             console.log(myArray[i]);
         }
     }
