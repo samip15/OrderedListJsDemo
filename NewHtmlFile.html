@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New Html File</title>
+</head>
+
+<body>
+    <input type="text" id="myText" />
+    <button onclick="addToArray()">Add</button>
+    <div class="comments">
+        <ol id="myList">
+            <!-- <li>
+                    A passes the ball to B
+                </li>
+                <li>
+                    B scored a goal!!!
+                </li> -->
+        </ol>
+    </div>
+</body>
+
+</html>
+<script>
+    function addToArray() {
+        // list.innerHTML = list.innerHTML + "<li> This is my new Item </li>"
+        var nameList = document.getElementById("myText").value;
+        var myArray = [nameList.toString()];
+        var list = document.getElementById("myList");
+        for (var i = 0; i < myArray.length; i++) {
+            alert(nameList);
+            list.innerHTML = list.innerHTML + "<li>" + myArray[i] + "</li>"
+            console.log(myArray[i]);
+        }
+    }
+</script>
